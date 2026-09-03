@@ -33,4 +33,55 @@ h1 span{color:#777}
 .certificate{aspect-ratio:1.414/1;background:#151515;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
 .placeholder-cert span{font-size:12px;letter-spacing:.14em;color:#555}
 footer{padding:35px 0;color:#666;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer-inner div{display:flex;gap:22px}
+.project-image {
+  min-height: 390px;
+  background: #151515;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  display: block;
+  object-fit: cover;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.certificate {
+  display: block;
+  aspect-ratio: 1.414 / 1;
+  background: #151515;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.certificate:hover {
+  opacity: 0.75;
+}
+
+.certificate img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image,
+  .project-image img {
+    min-height: 260px;
+  }
+}
 @media(max-width:760px){.container{width:min(100% - 30px,1080px)}.hero{min-height:auto;padding:80px 0}h1{font-size:clamp(54px,17vw,90px)}.project,.project.reverse{grid-template-columns:1fr;gap:35px}.project.reverse .project-image,.project.reverse .project-content{order:initial}.project-image{min-height:260px}.certificate-grid{grid-template-columns:1fr}.section{padding:80px 0}.footer-inner{flex-direction:column}}
